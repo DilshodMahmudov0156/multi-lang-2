@@ -1,0 +1,12 @@
+{
+  "navbar": {
+    "home": "Asosiy",
+    "about": "Biz Haqimizda",
+    "projects": "Loyihalar",
+    "contact": "Aloqa"
+  },
+  "HomePage": {
+    "title": "Vebsayt haqida",
+    "about": "Bu vebsayt next-int va tailwind css orqali yaratilgan, hozirda u rivojlantirilmoqda. Agar sizda fikrlar bo'lsa aytishingiz mumkin, fikrlaringiz albatta inobatga olinadi!"
+  }
+}

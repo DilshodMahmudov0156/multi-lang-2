@@ -1,0 +1,12 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "HomePage": {
+    "title": "About the website",
+    "about": "This website is built using next-int and tailwind css, and is currently under development. If you have any ideas, please let us know, we will definitely consider your ideas!"
+  }
+}
