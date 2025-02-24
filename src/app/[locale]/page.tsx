@@ -1,47 +1,40 @@
+"use client"
 import React from 'react';
-import {useTranslations} from "next-intl";
 import Link from "next/link";
-import {DropdownMenuRadioGroupDemo} from "../../components/myDropdown";
+import {useTranslations} from "next-intl";
+import {usePathname} from "next/navigation";
 
 function MainPage() {
-    const n = useTranslations("navbar");
-    const h = useTranslations("HomePage");
+
+    const pathname = usePathname();
+
+    const t = useTranslations("HomePage");
+
     return (
         <div className="w-full">
-            <nav className="w-full px-5 flex justify-between items-center bg-gray-30 shadow-sm ">
-                <div className="logo font-bold text-[25px]">Logo</div>
+            <nav className="w-full py-5 flex items-center bg-[#15203b] px-[200px]">
                 <ul className="flex items-center">
-                    <DropdownMenuRadioGroupDemo/>
-                    <Link href="/" className="hover:text-gray-300 transition duration-200 hover:bg-[#030712] block py-3 px-4">{n("home")}</Link>
-                    <Link href="/about" className="hover:text-gray-300 transition duration-200 hover:bg-[#030712] block py-3 px-4">{n("about")}</Link>
-                    <Link href="/projects" className="hover:text-gray-300 transition duration-200 hover:bg-[#030712] block py-3 px-4">{n("projects")}</Link>
-                    <Link href="/contact" className="hover:text-gray-300 transition duration-200 hover:bg-[#030712] block py-3 px-4">{n("contact")}</Link>
+                    <Link href="/" className="text-gray-400 mx-4 hover:text-[#fff]">Home</Link>
+                    <Link href={`/${pathname.split("/")[1]}/about`} className="text-gray-400 mx-4 hover:text-[#fff]">About</Link>
                 </ul>
             </nav>
-            <header className="p-5">
-                <h1 className="text-[40px] font-bold text-blue-600 text-center mt-5">
-                    UZB, ENG, RUS project with
-                    <br/>
-                    'next-Intl' and 'tailwindcss'
-                </h1>
-            </header>
             <section>
-                <div
-                    className="
-                    card border shadow-xl
-                    rounded-md w-[300px]
-                    m-auto mt-5 p-4"
-                >
-                    <h1 className="text-[20px] text-center mb-2 text-green-500">
-                        {h("title")}
-                    </h1>
-                    <p className="text-red-500 block">
-                        {h("about")}
-                    </p>
-                </div>
-
+                <h1 className="text-lg">
+                    Next-js (Internationalization)
+                </h1>
+                <p>
+                    this website is created by practicing next-intl
+                </p>
+                <p>
+                    {
+                        t("about")
+                    }
+                </p>
             </section>
-
+            {/*<button*/}
+            {/*    className="py-2 px-4 border border-black rounded-md transition duration-300 hover:bg-black hover:text-white">*/}
+            {/*    click on it*/}
+            {/*</button>*/}
         </div>
     );
 }
