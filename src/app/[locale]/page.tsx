@@ -10,7 +10,6 @@ function MainPage() {
         <div className="w-full">
             <nav className="w-full px-5 flex justify-between items-center bg-gray-30 shadow-sm ">
                 <div className="logo font-bold text-[25px]">Logo</div>
-                <LanguageSwitcher/>
                 <ul className="flex items-center">
                     <DropdownMenuRadioGroupDemo/>
                     <Link href="/" className="hover:text-gray-300 transition duration-200 hover:bg-[#030712] block py-3 px-4">{n("home")}</Link>
@@ -48,13 +47,3 @@ function MainPage() {
 }
 
 export default MainPage;
-
-export  const LanguageSwitcher = () => {
-    return(
-        <div className="flex items-center space-x-3">
-            <Link href={"/uz"}>Uzb</Link>
-            <Link href={"/ru"}>Rus</Link>
-            <Link href={"/en"}>Eng</Link>
-        </div>
-    )
-}
